@@ -1,14 +1,14 @@
-# This is a boilerplate
+# This is a HTML boilerplate with
 
-    - Dark Mode
-    - Light Mode
-    - Responsive navbar
+    + Dark Mode
+    + Light Mode
+    + Responsive navbar
 
 ## Stack
 
-    - HTML
-    - CSS
-    - Vanilla JavaScript
+    + HTML
+    + CSS
+    + Vanilla JavaScript
 
 ### Usage
 
@@ -18,5 +18,6 @@ Clone the repository
 Go into to directory
 `cd html-boilerplate`
 
-Change the color pallete in `/assets/css/styles.css`
+Change the color pallete in `/assets/css/styles.css` and
+
 Change the logo in `/assets/images/logo.png`
