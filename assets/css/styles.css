@@ -1,3 +1,7 @@
+/*==================================
+        CSS Variables
+==================================*/
+
 :root {
     --color-primary: #0095da;
     --color-secondary: #05233e;
@@ -15,6 +19,10 @@
     --color-dark: #f5f5f5;
     --color-light: #1a1a1a;
 }
+
+/*==================================
+        Global Styles
+==================================*/
 
 * {
     margin: 0;
@@ -39,7 +47,7 @@ ul li {
 }
 
 /*==================================
-        Header/Navbar Styles
+            Header/Navbar
 ==================================*/
 header {
     position: sticky;
@@ -164,7 +172,7 @@ header {
 }
 
 /*==================================
-        Main Section Styles
+            Main Section
 ==================================*/
 main {
     display: flex;
@@ -187,7 +195,7 @@ main p {
 }
 
 /*==================================
-        Footer Section Styles
+            Footer Section
 ==================================*/
 footer {
     background-color: var(--color-secondary);
@@ -210,7 +218,7 @@ footer p a:hover {
 }
 
 /*==================================
-        Responsive Styles
+        Media Queries
 ==================================*/
 @media (min-width: 768px) {
     .navbar .nav-menu {

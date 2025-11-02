@@ -69,7 +69,7 @@ function navToggle() {
         navMenu.classList.remove("toggled");
     });
 
-    // Nav menu Active state
+    // Nav Menu Active state
     navMenu.addEventListener("click", (e) => {
         if (e.target.classList.contains("nav-link")) {
             navLinks.forEach((link) => {
