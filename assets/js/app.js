@@ -5,13 +5,15 @@ function navToggle() {
     const line3 = document.querySelector(".line-3");
     const navMenu = document.querySelector(".nav-menu");
 
+    // Toggle Nav
     navToggler.addEventListener("click", () => {
         line1.classList.toggle("rotate");
         line2.classList.toggle("none");
         line3.classList.toggle("rotate");
-        navMenu.classList.toggle("active");
+        navMenu.classList.toggle("toggled");
     });
 
+    // Close Nav When Click Outside
     document.body.addEventListener("click", (e) => {
         if (
             !e.target.closest(".nav-toggler") &&
@@ -20,7 +22,60 @@ function navToggle() {
             line1.classList.remove("rotate");
             line2.classList.remove("none");
             line3.classList.remove("rotate");
-            navMenu.classList.remove("active");
+            navMenu.classList.remove("toggled");
+        }
+    });
+
+    // Close Nav When Click Link
+    const navLinks = document.querySelectorAll(".nav-link");
+    navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+            line1.classList.remove("rotate");
+            line2.classList.remove("none");
+            line3.classList.remove("rotate");
+            navMenu.classList.remove("toggled");
+        });
+    });
+
+    // Close Nav On Scroll
+    window.addEventListener("scroll", () => {
+        line1.classList.remove("rotate");
+        line2.classList.remove("none");
+        line3.classList.remove("rotate");
+        navMenu.classList.remove("toggled");
+    });
+
+    // Close Nav On Resize
+    window.addEventListener("resize", () => {
+        line1.classList.remove("rotate");
+        line2.classList.remove("none");
+        line3.classList.remove("rotate");
+        navMenu.classList.remove("toggled");
+    });
+
+    // Close Nav On Orientation Change
+    window.addEventListener("orientationchange", () => {
+        line1.classList.remove("rotate");
+        line2.classList.remove("none");
+        line3.classList.remove("rotate");
+        navMenu.classList.remove("toggled");
+    });
+
+    // Close Nav On Load
+    window.addEventListener("load", () => {
+        line1.classList.remove("rotate");
+        line2.classList.remove("none");
+        line3.classList.remove("rotate");
+        navMenu.classList.remove("toggled");
+    });
+
+    // Nav menu Active state
+    navMenu.addEventListener("click", (e) => {
+        if (e.target.classList.contains("nav-link")) {
+            navLinks.forEach((link) => {
+                link.classList.remove("active");
+            });
+            e.target.classList.add("active");
         }
     });
 }
@@ -50,12 +105,15 @@ function disableDarkMode() {
 function themeToggler() {
     const themeToggler = document.querySelector(".theme-toggle");
     const currentTheme = localStorage.getItem("theme");
+
+    // Set Theme on Initial Load
     if (currentTheme === "dark") {
         EnableDarkMode();
     } else {
         disableDarkMode();
     }
 
+    // Toggle Theme
     themeToggler.addEventListener("click", () => {
         const currentTheme = localStorage.getItem("theme");
         if (currentTheme === "dark") {

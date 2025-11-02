@@ -112,7 +112,7 @@ header {
     align-items: center;
 }
 
-.navbar .nav-menu.active {
+.navbar .nav-menu.toggled {
     display: flex;
     position: absolute;
     top: 70px;
@@ -126,7 +126,7 @@ header {
     height: 100vh;
 }
 
-.navbar ul li a {
+.navbar .nav-menu .nav-item .nav-link {
     font-size: 1rem;
     color: var(--color-primary);
     transition: color 0.3s ease;
@@ -136,7 +136,8 @@ header {
     margin: 0;
 }
 
-.navbar ul li a:hover {
+.navbar .nav-menu .nav-item .nav-link:hover,
+.navbar .nav-menu .nav-item .nav-link.active {
     color: var(--color-hover);
 }
 
@@ -197,6 +198,15 @@ footer {
 footer p {
     margin: 0;
     font-size: 0.9rem;
+}
+
+footer p a {
+    color: var(--color-primary);
+    transition: color 0.3s ease;
+}
+
+footer p a:hover {
+    color: var(--color-hover);
 }
 
 /*==================================
