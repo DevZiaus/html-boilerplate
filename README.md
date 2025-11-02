@@ -3,6 +3,7 @@
 -   Dark Mode
 -   Light Mode
 -   Responsive NavBar
+-   Navbar Menu Active State
 
 ## Tech Stack
 
